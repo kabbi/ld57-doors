@@ -1,3 +1,4 @@
+using Unity.Physics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,6 +7,7 @@ public class ThirdPersonMoveController : MonoBehaviour {
     public float runSpeed = 5;
     public float jumpForce = 5;
     public float lookRotationDampFactor = 10;
+    public bool uncontrolledFall;
     private State state = State.Moving;
     private PlayerInput playerInput;
     private CharacterController controller;
@@ -37,6 +39,12 @@ public class ThirdPersonMoveController : MonoBehaviour {
         jumpAction = playerInput.currentActionMap.FindAction("Jump");
         runAction = playerInput.currentActionMap.FindAction("Run");
         respawnAction = playerInput.currentActionMap.FindAction("Respawn");
+
+        if (uncontrolledFall) {
+            controller.enabled = false;
+            Rigidbody body = gameObject.AddComponent<Rigidbody>();
+            body.AddForce(Random.onUnitSphere * 100);
+        }
     }
 
     void OnEnable() {
