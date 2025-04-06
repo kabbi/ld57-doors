@@ -4,12 +4,16 @@ using UnityEngine.InputSystem;
 public class SimpleDoorController : MonoBehaviour {
     private PlayerInput playerInput;
     private InputAction interactAction;
+    private AudioSource audioSource;
+    public AudioClip openSound;
+    public AudioClip closeSound;
     public Animator animator;
     public HintZone hintZone;
     private bool opened;
 
     void Awake() {
-        playerInput = GetComponent<PlayerInput>();
+        audioSource = GetComponent<AudioSource>();
+        playerInput = FindFirstObjectByType<PlayerInput>();
         interactAction = playerInput.currentActionMap.FindAction("Interact");
     }
 
@@ -22,12 +26,13 @@ public class SimpleDoorController : MonoBehaviour {
     }
 
     private void HandleAction(InputAction.CallbackContext context) {
+        if (!hintZone.activated) {
+            return;
+        }
         if (context.action == interactAction && context.performed) {
-            if (!hintZone.activated) {
-                return;
-            }
             opened = !opened;
             animator.SetBool("opened", opened);
+            audioSource.PlayOneShot(opened ? openSound : closeSound);
         }
     }
 }

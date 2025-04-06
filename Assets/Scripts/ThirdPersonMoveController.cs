@@ -30,8 +30,8 @@ public class ThirdPersonMoveController : MonoBehaviour {
 
     void Awake() {
         ourCamera = Camera.main.transform;
-        playerInput = GetComponent<PlayerInput>();
         controller = GetComponent<CharacterController>();
+        playerInput = FindFirstObjectByType<PlayerInput>();
         moveAction = playerInput.currentActionMap.FindAction("Move");
         lookAction = playerInput.currentActionMap.FindAction("Look");
         jumpAction = playerInput.currentActionMap.FindAction("Jump");
