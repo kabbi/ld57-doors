@@ -23,7 +23,9 @@ MonoBehaviour:
   - Controls
   - Textures
   - Door Collider
-  middleOptions: []
+  middleOptions:
+  - is not
+  - is
   rightOptions:
   - "blocking player\u2019s movement"
   - applying force

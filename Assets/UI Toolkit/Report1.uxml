@@ -2,16 +2,26 @@
     <Style src="project://database/Assets/something.uss?fileID=7433441132597879392&amp;guid=142cb77a2df8b484b89a3a55010c9bfb&amp;type=3" />
     <ui:VisualElement name="root" style="flex-grow: 1; background-image: none; -unity-slice-left: 16; -unity-slice-top: 16; -unity-slice-right: 16; -unity-slice-bottom: 16; -unity-slice-scale: 1px; background-repeat: repeat repeat; -unity-background-scale-mode: stretch-to-fill; background-size: 100% 100%; padding-top: 16px; padding-right: 16px; padding-bottom: 16px; padding-left: 16px;">
         <ui:VisualElement name="reportPanel" style="flex-grow: 1; display: flex; justify-content: space-around;">
-            <ui:Label text="Bug Report" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 42px;" />
+            <ui:Label text="Test Report" name="Label" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 42px;" />
             <ui:VisualElement style="flex-grow: 0; justify-content: center;">
                 <ui:DropdownField choices="Animation,Player Collider,Controls,Textures" index="0" name="leftDropdown" style="font-size: 24px;" />
                 <ui:DropdownField choices="is not,is" index="0" name="middleDropdown" style="font-size: 24px;" />
                 <ui:DropdownField choices="animating,Player Collider,Controls,Textures" index="0" name="rightDropdown" style="font-size: 24px;" />
             </ui:VisualElement>
-            <ui:Button text="Submit" name="submitButton" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/External/Kenney/UI%20Pack%20-%20Adventure/PNG/Default/button_brown.png?fileID=21300000&amp;guid=ceeaf4e5f1e30428b935633dc4eb11e7&amp;type=3#button_brown&quot;); border-top-width: 0; border-left-width: 0; border-bottom-width: 0; border-right-width: 0; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(188, 188, 188, 0); -unity-slice-left: 4; -unity-slice-top: 4; -unity-slice-right: 4; -unity-slice-bottom: 4; -unity-slice-scale: 2px; font-size: 48px;" />
+            <ui:Button text="Send back to&#10;dev department" name="submitButton" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/External/Kenney/UI%20Pack%20-%20Adventure/PNG/Default/button_brown.png?fileID=21300000&amp;guid=ceeaf4e5f1e30428b935633dc4eb11e7&amp;type=3#button_brown&quot;); border-top-width: 0; border-left-width: 0; border-bottom-width: 0; border-right-width: 0; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(188, 188, 188, 0); -unity-slice-left: 4; -unity-slice-top: 4; -unity-slice-right: 4; -unity-slice-bottom: 4; -unity-slice-scale: 2px; font-size: 32px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="resultPanel" style="flex-grow: 1; justify-content: center; align-items: center; display: none;">
-            <ui:Label text="Submitted" style="font-size: 48px; -unity-font-style: bold;" />
+        <ui:VisualElement name="progressPanel" style="flex-grow: 1; justify-content: flex-start; align-items: center; display: none;">
+            <ui:Label text="Dev Team&#10;Fixing Bugs" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 42px;" />
+            <ui:ProgressBar value="30.1" title="4s left" name="progressBar" style="align-self: stretch;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="successPanel" style="flex-grow: 1; justify-content: flex-start; align-items: center; display: none;">
+            <ui:Label text="Dev Team&#10;Done" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 42px;" />
+            <ui:Label text="The issue was confirmed and fixed, door shipped to customer" style="-unity-text-align: upper-left; -unity-font-style: normal; font-size: 32px; align-items: flex-start; white-space: normal;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="failPanel" style="flex-grow: 1; justify-content: flex-start; align-items: center; display: none;">
+            <ui:Label text="Dev Team&#10;Done" style="-unity-text-align: upper-center; -unity-font-style: bold; font-size: 42px;" />
+            <ui:Label text="Dev team could not reproduce the issue, here is your door back" style="-unity-text-align: upper-left; -unity-font-style: normal; font-size: 32px; align-items: flex-start; white-space: normal;" />
+            <ui:Button text="Try again&#10;" name="restartButton" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/External/Kenney/UI%20Pack%20-%20Adventure/PNG/Default/button_brown.png?fileID=21300000&amp;guid=ceeaf4e5f1e30428b935633dc4eb11e7&amp;type=3#button_brown&quot;); border-top-width: 0; border-left-width: 0; border-bottom-width: 0; border-right-width: 0; -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgba(188, 188, 188, 0); -unity-slice-left: 4; -unity-slice-top: 4; -unity-slice-right: 4; -unity-slice-bottom: 4; -unity-slice-scale: 2px; font-size: 32px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19101, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: WorldSpaceUIPanelSettings5
+  m_Name: WorldSpaceUIPanelSettings1
   m_EditorClassIdentifier: 
   themeUss: {fileID: -4733365628477956816, guid: 7eeaa0db7bbdd4a048fd65cc85347edb, type: 3}
   m_DisableNoThemeWarning: 0
-  m_TargetTexture: {fileID: 8400000, guid: 3c104ab301971495895ca1dac4cfd1b3, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 51f2135ce6a39408597ff6c192655c50, type: 2}
   m_RenderMode: 0
   m_WorldSpaceLayer: 0
   m_ScaleMode: 2
