@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Door1TestCase
   m_EditorClassIdentifier: 
   title: Door Collider is not active
+  thereIsNoBug: 0
   checklist: "\u2610 \"Press E to open\" prompt appears when facing the door\n\u2610
     Door opens and closes when pressing E\n\u2610 No unexpected collision when the
     player interacts with the door\n\u2610 Player can walk through the doorway when
@@ -23,6 +24,9 @@ MonoBehaviour:
   - Button
   - Door Texture
   - Door
+  middleOptions:
+  - is
+  - is not
   rightOptions:
   - playing correctly
   - sized correctly
@@ -31,4 +35,5 @@ MonoBehaviour:
   - active
   validAnswers:
   - left: Door Collider
+    middle: is not
     right: active

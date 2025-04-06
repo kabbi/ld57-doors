@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Door2TestCase
   m_EditorClassIdentifier: 
   title: "Door Collider is not supposed to interact with player\u2019s collider"
+  thereIsNoBug: 0
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
     through the doorway when the door is opened\n\u2610 No unintended physics or
     force applied when interacting with the door\n"
@@ -22,6 +23,7 @@ MonoBehaviour:
   - Controls
   - Textures
   - Door Collider
+  middleOptions: []
   rightOptions:
   - "blocking player\u2019s movement"
   - applying force
@@ -30,5 +32,5 @@ MonoBehaviour:
   - "affecting the player\u2019s position"
   validAnswers:
   - left: Door Collider
+    middle: is not
     right: "supposed to interact with player\u2019s collider"
-  thereIsNoBug: 0

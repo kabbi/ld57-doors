@@ -13,20 +13,26 @@ MonoBehaviour:
   m_Name: Door3TestCase
   m_EditorClassIdentifier: 
   title: Fall through textures
+  thereIsNoBug: 1
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
     through the doorway when the door is opened\n\u2610 No strange or unexpected
     movement when the door opens"
   leftOptions:
-  - Animation
-  - Player Collider
-  - Controls
-  - Textures
-  - Door Collider
+  - Control Button
+  - Collider
+  - Trigger
+  - Player
+  - Texture
+  middleOptions:
+  - is not
+  - is
   rightOptions:
-  - "blocking player\u2019s movement"
-  - applying force
-  - "supposed to interact with player\u2019s collider"
-  - colliding with the player
-  - "affecting the player\u2019s position"
-  validAnswers: []
-  thereIsNoBug: 1
+  - covering the intended area
+  - doing well
+  - triggering the intended door
+  - crashing
+  - bad
+  validAnswers:
+  - left: Control Button
+    middle: is not
+    right: triggering the intended door
