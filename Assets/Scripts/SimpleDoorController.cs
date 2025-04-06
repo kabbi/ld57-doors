@@ -43,4 +43,11 @@ public class SimpleDoorController : MonoBehaviour {
     public void SetInProgress(bool wip) {
         animator.SetBool("wip", wip);
     }
+
+    public void Crash() {
+        BSODController bsod = FindFirstObjectByType<BSODController>();
+        bsod.Begin();
+        animator.SetBool("opened", false);
+        opened = false;
+    }
 }
