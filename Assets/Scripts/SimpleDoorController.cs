@@ -9,7 +9,7 @@ public class SimpleDoorController : MonoBehaviour {
     public AudioClip closeSound;
     public Animator animator;
     public HintZone hintZone;
-    private bool opened;
+    public bool opened;
 
     void Awake() {
         audioSource = GetComponent<AudioSource>();
@@ -26,13 +26,21 @@ public class SimpleDoorController : MonoBehaviour {
     }
 
     private void HandleAction(InputAction.CallbackContext context) {
-        if (!hintZone.activated) {
+        if (!hintZone || !hintZone.activated) {
             return;
         }
         if (context.action == interactAction && context.performed) {
-            opened = !opened;
-            animator.SetBool("opened", opened);
-            audioSource.PlayOneShot(opened ? openSound : closeSound);
+            SetOpened(!opened);
         }
+    }
+
+    public void SetOpened(bool v) {
+        opened = v;
+        animator.SetBool("opened", opened);
+        audioSource.PlayOneShot(opened ? openSound : closeSound);
+    }
+
+    public void SetInProgress(bool wip) {
+        animator.SetBool("wip", wip);
     }
 }
