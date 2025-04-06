@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055fc8e20005b43339eeba25cd796fb6, type: 3}
+  m_Name: Door2TestCase
+  m_EditorClassIdentifier: 
+  title: "Door Collider is not supposed to interact with player\u2019s collider"
+  checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
+    through the doorway when the door is opened\n\u2610 No unintended physics or
+    force applied when interacting with the door\n"
+  leftOptions:
+  - Animation
+  - Player Collider
+  - Controls
+  - Textures
+  - Door Collider
+  rightOptions:
+  - "blocking player\u2019s movement"
+  - applying force
+  - "supposed to interact with player\u2019s collider"
+  - colliding with the player
+  - "affecting the player\u2019s position"
+  validAnswers:
+  - left: Door Collider
+    right: "supposed to interact with player\u2019s collider"
+  thereIsNoBug: 0
