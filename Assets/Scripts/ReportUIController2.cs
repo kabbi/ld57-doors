@@ -11,8 +11,10 @@ public class ReportUIController2 : MonoBehaviour {
     private DropdownField leftDropdown;
     private DropdownField middleDropdown;
     private DropdownField rightDropdown;
+    private ProgressBar progressBar;
     public SimpleDoorController[] doors;
     public DoorTestCase testCase;
+    public float submitDelay = 5;
     public bool completed;
 
     void Start() {
@@ -25,6 +27,7 @@ public class ReportUIController2 : MonoBehaviour {
         leftDropdown = root.Q<DropdownField>("leftDropdown");
         rightDropdown = root.Q<DropdownField>("rightDropdown");
         middleDropdown = root.Q<DropdownField>("middleDropdown");
+        progressBar = root.Q<ProgressBar>("progressBar");
 
         Button submitButton = root.Q<Button>("submitButton");
         submitButton.clicked += OnSubmit;
@@ -67,22 +70,35 @@ public class ReportUIController2 : MonoBehaviour {
         reportPanel.style.display = DisplayStyle.Flex;
     }
 
-    private IEnumerator SubmitDoor(bool success) {
+    private void SetDoorsInProgress(bool inProgress) {
         foreach (var door in doors) {
-            door.SetInProgress(true);
+            door.SetInProgress(inProgress);
         }
+    }
+
+    private IEnumerator SubmitDoor(bool success) {
+        SetDoorsInProgress(true);
         reportPanel.style.display = DisplayStyle.None;
         progressPanel.style.display = DisplayStyle.Flex;
-        yield return new WaitForSeconds(5);
+        float timeStart = Time.time;
+        while (true) {
+            float timeElapsed = Time.time - timeStart;
+            float timeLeft = submitDelay - timeElapsed;
+            if (timeLeft <= 0) {
+                break;
+            }
+
+            progressBar.value = timeElapsed / submitDelay * 100;
+            progressBar.title = $"{timeLeft:F1}s left";
+            yield return new WaitForEndOfFrame();
+        }
         progressPanel.style.display = DisplayStyle.None;
         if (success) {
             successPanel.style.display = DisplayStyle.Flex;
             completed = true;
         }
         else {
-            foreach (var door in doors) {
-                door.SetInProgress(false);
-            }
+            SetDoorsInProgress(false);
             failPanel.style.display = DisplayStyle.Flex;
         }
     }
