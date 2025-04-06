@@ -10,32 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 055fc8e20005b43339eeba25cd796fb6, type: 3}
-  m_Name: Door2TestCase
+  m_Name: Door4TestCaseWall
   m_EditorClassIdentifier: 
-  title: "Door Collider is not supposed to interact with player\u2019s collider"
-  thereIsNoBug: 0
+  title: Wall Door
+  thereIsNoBug: 1
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
-    through the doorway when the door is opened\n\u2610 No unintended physics or
-    force applied when interacting with the door\n"
+    through the doorway when the door is opened\n\u2610 No strange or unexpected
+    movement when the door opens"
   leftOptions:
-  - Animation
-  - Player Collider
-  - Controls
-  - Textures
+  - Physics
+  - Wall
+  - Passage
+  - Player
   - Door Collider
   middleOptions:
   - is not
   - is
   rightOptions:
-  - "blocking player\u2019s movement"
-  - applying force
-  - "supposed to interact with player\u2019s collider"
-  - breaks
-  - not pretty
+  - covering the intended area
+  - accessible
+  - correct
+  - boring
+  - blocking the player
   validAnswers:
-  - left: Door Collider
+  - left: Passage
     middle: is not
-    right: "supposed to interact with player\u2019s collider"
-  - left: Door Collider
+    right: accessible
+  - left: Wall
     middle: is
-    right: applying force
+    right: blocking the player
