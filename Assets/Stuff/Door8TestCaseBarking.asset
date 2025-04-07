@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 055fc8e20005b43339eeba25cd796fb6, type: 3}
-  m_Name: Door4TestCaseCrash
+  m_Name: Door8TestCaseBarking
   m_EditorClassIdentifier: 
-  title: Crash Door
+  title: Barking Door
   thereIsNoBug: 1
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
     through the doorway when the door is opened\n\u2610 No strange or unexpected
     movement when the door opens"
   leftOptions:
-  - Game
+  - Control Button
   - Collider
-  - Passage
-  - Player
   - Trigger
+  - Player
+  - Door Audio
   middleOptions:
   - is not
   - is
   rightOptions:
   - covering the intended area
-  - accessible
+  - colliding with the player
   - correct
-  - crashing
-  - blocking the player
+  - boring
+  - triggering the physics
   validAnswers:
-  - left: Game
-    middle: is
-    right: crashing
+  - left: Door Audio
+    middle: is not
+    right: correct

@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 055fc8e20005b43339eeba25cd796fb6, type: 3}
-  m_Name: Door4TestCaseWall
+  m_Name: Door7TestCaseNoHole
   m_EditorClassIdentifier: 
-  title: Wall Door
+  title: Crash Door
   thereIsNoBug: 1
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
     through the doorway when the door is opened\n\u2610 No strange or unexpected
     movement when the door opens"
   leftOptions:
-  - Physics
-  - Wall
+  - Game
+  - Collider
   - Passage
   - Player
-  - Door Collider
+  - Trigger
   middleOptions:
   - is not
   - is
@@ -30,12 +30,9 @@ MonoBehaviour:
   - covering the intended area
   - accessible
   - correct
-  - boring
+  - crashing
   - blocking the player
   validAnswers:
   - left: Passage
     middle: is not
     right: accessible
-  - left: Wall
-    middle: is
-    right: blocking the player

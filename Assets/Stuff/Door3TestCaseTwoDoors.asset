@@ -10,29 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 055fc8e20005b43339eeba25cd796fb6, type: 3}
-  m_Name: Door4TestCaseWalking
+  m_Name: Door3TestCaseTwoDoors
   m_EditorClassIdentifier: 
-  title: Walking Door
+  title: Fall through textures
   thereIsNoBug: 1
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
     through the doorway when the door is opened\n\u2610 No strange or unexpected
     movement when the door opens"
   leftOptions:
-  - Physics
-  - Door Animation
-  - Passage
+  - Control Button
+  - Collider
+  - Trigger
   - Player
-  - Door Collider
+  - Texture
   middleOptions:
   - is not
   - is
   rightOptions:
   - covering the intended area
-  - accessible
-  - interrupted by player collider
-  - boring
-  - blocking the player
+  - doing well
+  - triggering the intended door
+  - crashing
+  - bad
   validAnswers:
-  - left: Door Animation
-    middle: is
-    right: interrupted by player collider
+  - left: Control Button
+    middle: is not
+    right: triggering the intended door
