@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 055fc8e20005b43339eeba25cd796fb6, type: 3}
   m_Name: Door5TestCaseSpinning
   m_EditorClassIdentifier: 
-  title: Wall Door
+  title: Spinning Door
   thereIsNoBug: 1
   checklist: "\u2610 Door opens and closes when pressing E\n\u2610 Player can walk
     through the doorway when the door is opened\n\u2610 No strange or unexpected
     movement when the door opens"
   leftOptions:
-  - Physics
+  - Door Animation
   - Wall
-  - Passage
+  - Game
   - Player
   - Door Collider
   middleOptions:
@@ -28,14 +28,14 @@ MonoBehaviour:
   - is
   rightOptions:
   - covering the intended area
-  - accessible
+  - doing wheeee
   - correct
   - boring
-  - blocking the player
+  - broken
   validAnswers:
-  - left: Physics
+  - left: Door Animation
     middle: is not
     right: correct
-  - left: Door Collider
+  - left: Door Animation
     middle: is
-    right: boring
+    right: doing wheeee
