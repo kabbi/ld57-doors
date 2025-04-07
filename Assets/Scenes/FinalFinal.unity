@@ -13949,6 +13949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door_wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 98b17aed8c3bdf24c9a1a94f83d96a7a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13980,7 +13984,7 @@ MeshCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -18586,7 +18590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  hintLabel: {fileID: 0}
+  hintLabel: {fileID: 643578903}
 --- !u!65 &608657358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45601,6 +45605,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door5
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c337418237ddf4251b11df07f462463f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -45721,7 +45729,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 1
@@ -60572,7 +60580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activated: 0
-  hintLabel: {fileID: 0}
+  hintLabel: {fileID: 643578903}
 --- !u!65 &1967145711
 BoxCollider:
   m_ObjectHideFlags: 0
