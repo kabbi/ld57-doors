@@ -6,6 +6,10 @@
     color: rgb(255, 255, 255);
 }
 
+.unity-text-element {
+    -unity-font-definition: url("project://database/Assets/External/IBMPlexMono-Medium.ttf?fileID=12800000&guid=56a934ad8f27d4d47a0657da3a782126&type=3#IBMPlexMono-Medium");
+}
+
 .unity-progress-bar__background {
     background-color: rgba(156, 156, 156, 0.5);
 }
