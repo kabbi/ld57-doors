@@ -13,6 +13,7 @@ public class ReportUIController2 : MonoBehaviour {
     private DropdownField rightDropdown;
     private ProgressBar progressBar;
     public SimpleDoorController[] doors;
+    public GameObject[] lights;
     public DoorTestCase testCase;
     public float submitDelay = 5;
     public bool completed;
@@ -76,6 +77,12 @@ public class ReportUIController2 : MonoBehaviour {
         }
     }
 
+    private void SetLightsEnabled(bool enabled) {
+        foreach (var light in lights) {
+            light.SetActive(enabled);
+        }
+    }
+
     private IEnumerator SubmitDoor(bool success) {
         SetDoorsInProgress(true);
         reportPanel.style.display = DisplayStyle.None;
@@ -95,6 +102,7 @@ public class ReportUIController2 : MonoBehaviour {
         progressPanel.style.display = DisplayStyle.None;
         if (success) {
             successPanel.style.display = DisplayStyle.Flex;
+            SetLightsEnabled(false);
             completed = true;
         }
         else {

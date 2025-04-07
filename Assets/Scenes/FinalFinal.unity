@@ -4615,7 +4615,7 @@ GameObject:
   - component: {fileID: 176119954}
   - component: {fileID: 176119953}
   m_Layer: 0
-  m_Name: Spot Light (10)
+  m_Name: Door8Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10642,7 +10642,7 @@ GameObject:
   - component: {fileID: 378478640}
   - component: {fileID: 378478639}
   m_Layer: 0
-  m_Name: Spot Light (9)
+  m_Name: Door7Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11094,7 +11094,7 @@ GameObject:
   - component: {fileID: 401516049}
   - component: {fileID: 401516048}
   m_Layer: 0
-  m_Name: Spot Light (19)
+  m_Name: Door3Light2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14987,7 +14987,7 @@ GameObject:
   - component: {fileID: 507417957}
   - component: {fileID: 507417956}
   m_Layer: 0
-  m_Name: Spot Light (1)
+  m_Name: Door1Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21045,6 +21045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1496067437}
+  lights:
+  - {fileID: 1764797060}
   testCase: {fileID: 11400000, guid: 45e3707da9c89437fbf5639910b8df7e, type: 2}
   submitDelay: 5
   completed: 0
@@ -21490,6 +21492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1279433419}
+  lights:
+  - {fileID: 176119951}
   testCase: {fileID: 11400000, guid: 3e53d21c361b14e40a57cfc100866a23, type: 2}
   submitDelay: 5
   completed: 0
@@ -21872,7 +21876,7 @@ GameObject:
   - component: {fileID: 707650425}
   - component: {fileID: 707650424}
   m_Layer: 0
-  m_Name: Spot Light (5)
+  m_Name: Door3Light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22930,6 +22934,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 449087551}
+  lights:
+  - {fileID: 507417954}
   testCase: {fileID: 11400000, guid: 56ce81bd843d943288a319595faff487, type: 2}
   submitDelay: 5
   completed: 0
@@ -26615,7 +26621,7 @@ GameObject:
   - component: {fileID: 892014677}
   - component: {fileID: 892014676}
   m_Layer: 0
-  m_Name: Spot Light (2)
+  m_Name: Door2Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36470,6 +36476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 662281804}
+  lights:
+  - {fileID: 892014674}
   testCase: {fileID: 11400000, guid: 671dca400c82d4853aa6520c7b8de81a, type: 2}
   submitDelay: 5
   completed: 0
@@ -38129,6 +38137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1643551331}
+  lights:
+  - {fileID: 1268258896}
   testCase: {fileID: 11400000, guid: 928e703fc4f4b45a99524259f363d587, type: 2}
   submitDelay: 5
   completed: 0
@@ -38751,7 +38761,7 @@ GameObject:
   - component: {fileID: 1268258899}
   - component: {fileID: 1268258898}
   m_Layer: 0
-  m_Name: Spot Light (6)
+  m_Name: Door4Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39493,6 +39503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 653003017}
+  lights:
+  - {fileID: 378478637}
   testCase: {fileID: 11400000, guid: d3473f6a8930e42eab5b4566a9717127, type: 2}
   submitDelay: 5
   completed: 0
@@ -54123,7 +54135,7 @@ GameObject:
   - component: {fileID: 1764797063}
   - component: {fileID: 1764797062}
   m_Layer: 0
-  m_Name: Spot Light (7)
+  m_Name: Door5Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54819,6 +54831,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doors:
   - {fileID: 1384661304}
+  lights:
+  - {fileID: 1843497981}
   testCase: {fileID: 11400000, guid: 0293082c84ed84743b6e3b3ec4a62769, type: 2}
   submitDelay: 5
   completed: 0
@@ -55157,6 +55171,9 @@ MonoBehaviour:
   doors:
   - {fileID: 282675080}
   - {fileID: 1584501937}
+  lights:
+  - {fileID: 707650422}
+  - {fileID: 401516046}
   testCase: {fileID: 11400000, guid: 58ed4bea5e70b4607ab1d2b50bef2849, type: 2}
   submitDelay: 5
   completed: 0
@@ -56806,7 +56823,7 @@ GameObject:
   - component: {fileID: 1843497984}
   - component: {fileID: 1843497983}
   m_Layer: 0
-  m_Name: Spot Light (8)
+  m_Name: Door6Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
