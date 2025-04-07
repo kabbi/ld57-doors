@@ -42,6 +42,9 @@ public class SimpleDoorController : MonoBehaviour {
 
     public void SetInProgress(bool wip) {
         animator.SetBool("wip", wip);
+        if (hintZone) {
+            hintZone.enabled = !wip;
+        }
     }
 
     public void Crash() {

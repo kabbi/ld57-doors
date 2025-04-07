@@ -4,8 +4,12 @@ public class HintZone : MonoBehaviour {
     public bool activated;
     public GameObject hintLabel;
 
+    void OnDisable() {
+        activated = false;
+    }
+
     void OnTriggerEnter(Collider other) {
-        if (!other.CompareTag("Player")) {
+        if (!enabled || !other.CompareTag("Player")) {
             return;
         }
         activated = true;
@@ -13,7 +17,7 @@ public class HintZone : MonoBehaviour {
     }
 
     void OnTriggerExit(Collider other) {
-        if (!other.CompareTag("Player")) {
+        if (!enabled || !other.CompareTag("Player")) {
             return;
         }
         activated = false;
